@@ -1,4 +1,4 @@
-// map 
+// callbackfn map 
 const a=[1,2,3];
 
 const fn=(item,index)=>{
@@ -15,7 +15,7 @@ function myNumber(item,index){
     console.log(`${item} at index ${index}`);
     
 }
-numbers.forEach(myNumber);
+numbers.forEach();
 
 
   
