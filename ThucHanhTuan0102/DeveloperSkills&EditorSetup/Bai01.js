@@ -4,7 +4,6 @@ const printForeCast=(arr)=>{
         forecastString +=`...${arr[i]}*C in ${i+1} days`;
         console.log(forecastString+"");
     }
-
 }
 // Data 1
 printForeCast([17,21,23])
