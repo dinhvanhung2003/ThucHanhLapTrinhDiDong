@@ -1,9 +1,6 @@
 // Code 1
 function whereAmI(lat, lng) {
-    // Reverse geocoding API URL
     const url = `https://geocode.xyz/${lat},${lng}?geoit=json`;
-  
-    // Fetching the data
     fetch(url)
       .then(response => {
         if (!response.ok) {
@@ -33,7 +30,7 @@ function whereAmI(lat, lng) {
 //   whereAmI(19.037, 72.873); // Mumbai, India
 //   whereAmI(-33.933, 18.474); // Cape Town, South Africa
   
-  // Helper function to render country data
+ 
   function renderCountry(data) {
     const countryHTML = `
       <article class="country">
