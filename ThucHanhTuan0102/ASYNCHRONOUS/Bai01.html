@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where Am I?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+    .countries {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .country {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      overflow: hidden;
+      width: 300px;
+      text-align: center;
+    }
+    .country__img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .country__data {
+      padding: 20px;
+    }
+    .country__name {
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .country__region {
+      font-size: 18px;
+      color: #777;
+    }
+    .country__row {
+      font-size: 16px;
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .country__row span {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="countries"></div>
+
+  <script src="Bai01.js"></script>
+</body>
+</html>
