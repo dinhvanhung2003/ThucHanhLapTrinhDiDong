@@ -25,7 +25,9 @@ const poll={
         }
     }
 }
-document.querySelector('.poll').addEventListener('click',poll.registerNewAnswer.bind(poll));
+document.addEventListener('DOMContentLoaded',()=>{
+    document.querySelector('.poll').addEventListener('click',poll.registerNewAnswer.bind(poll));
+})
 poll.displayResults.call({answers:[5,2,3]},'array');
 poll.displayResults.call({answers:[5,2,3]},'string');
 poll.displayResults.call({answers:[1,5,3,9,6,1]},'array');
@@ -34,7 +36,7 @@ poll.displayResults.call({answers:[1,5,3,9,6,1]},'string');
 (function(){
     const header=document.querySelector('h1');
     header.style.color='red';
-    document.querySelector('body').addEventListener('click',()=>{
+    document.body.addEventListener('click',()=>{
         header.style.color='blue';
     }
     );

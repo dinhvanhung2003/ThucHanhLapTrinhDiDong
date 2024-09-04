@@ -10,37 +10,37 @@ function Car(make, speed) {
     console.log(`${this.make} going at ${this.speed} km/h`);
   };
   
-  // Brake method
+  // Phương thức phanh
   Car.prototype.brake = function() {
     this.speed -= 5;
     console.log(`${this.make} going at ${this.speed} km/h`);
   };
   
-  // Constructor function for Electric Car
+  // Constructor
   function EV(make, speed, charge) {
     Car.call(this, make, speed);
     this.charge = charge;
   }
   
-  // Inherit methods from Car
+  // Phương thức kế thừa
   EV.prototype = Object.create(Car.prototype);
   EV.prototype.constructor = EV;
   
-  // Charge battery method
+  // Phương thức sạc điện
   EV.prototype.chargeBattery = function(chargeTo) {
     this.charge = chargeTo;
   };
   
-  // Accelerate method for Electric Car
+  // Phương thức tăng tốc cho xe điện
   EV.prototype.accelerate = function() {
     this.speed += 20;
     this.charge -= 1;
     console.log(`${this.make} going at ${this.speed} km/h, with a charge of ${this.charge}%`);
   };
-    // Creating an Electric Car object
+    // Tạo đối tượng xe điện
     const elec1 = new EV('Tesla', 120, 23);
   
-    // Testing methods
-    elec1.accelerate();     // Tesla going at 140 km/h, with a charge of 22%
-    elec1.brake();          // Tesla going at 135 km/h, with a charge of 22%
-    elec1.chargeBattery(90); // Charge set to 90%
+    // Test
+    elec1.accelerate();     
+    elec1.brake();          
+    elec1.chargeBattery(90); 
